@@ -1,13 +1,13 @@
-const nonsense = [1, 2, "hi", false, true, null, undefined];
+const playerNameAgePointsHandsome = ["Lee", 26, 1, false];
 
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fir", "sat"];
+const player = {
+  name: "Lee",
+  age: 26,
+  Points: 1,
+  fat: false,
+};
 
-console.log(nonsense);
-
-// Get Item from Array
-console.log(daysOfWeek[4]);
-
-// Add one more day to the Array
-daysOfWeek.push("sun");
-
-console.log(daysOfWeek);
+console.log(player);
+player.fat = true;
+player.name2 = "min";
+console.log(player);
