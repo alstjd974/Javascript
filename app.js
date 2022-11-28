@@ -1,23 +1,5 @@
-const calculator = {
-  plus: function (a, b) {
-    return a + b;
-  },
-  minus: function (a, b) {
-    return a - b;
-  },
-  mul: function (a, b) {
-    return a * b;
-  },
-  div: function (a, b) {
-    return a / b;
-  },
-  pow: function (a, b) {
-    return a ** b;
-  },
-};
+const age1 = prompt("How old are you");
+const age2 = parseInt(prompt("How old are you?"));
 
-const plusResult = calculator.plus(2, 3);
-const minusResult = calculator.minus(plusResult, 10);
-const mulResult = calculator.mul(10, minusResult);
-const divResult = calculator.div(mulResult, plusResult);
-const powResult = calculator.pow(divResult, minusResult);
+console.log(typeof age1, age1);
+console.log(typeof age2, age2);
