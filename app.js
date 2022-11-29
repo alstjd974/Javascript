@@ -1,9 +1,30 @@
-const title1 = document.getElementsByClassName("title");
-const title2 = document.querySelector(".hello h1");
-const title3 = document.querySelectorAll(".hello h1");
+const title = document.querySelector(".hello h1");
 
-console.log(title1);
-console.log(title2);
-console.log(title3);
+console.dir(title);
 
-title2.innerText = "Hello";
+function handleTitleClick() {
+  title.style.color = "blue";
+}
+
+function handleMouseEnter() {
+  title.innerText = "Mouse is here!";
+}
+
+function handleMouseLeave() {
+  title.innerText = "Mouse is gone!";
+}
+
+function handleWindowResize() {
+  document.body.style.backgroundColor = "blue";
+}
+
+function handleCopy() {
+  alert("Copier!");
+}
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleCopy);
