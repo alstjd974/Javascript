@@ -1,19 +1,16 @@
 const logInForm = document.querySelector("#login-form");
 const logInInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-const link = document.querySelector("a");
+const HIDDEN_CLASSNAME = "hidden";
 
-function onLoginSubmit(event) {
+function btnLogInClick(event) {
   event.preventDefault();
+  logInForm.classList.add(HIDDEN_CLASSNAME);
   const username = logInInput.value;
-  console.log(username);
-  console.log(event);
+
+  greeting.innerText = `Hello ${username}`; // === "Hello" + username;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-function handleLinkClick(event) {
-  event.preventDefault();
-  console.log(event);
-}
-
-logInForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLinkClick);
+logInForm.addEventListener("submit", btnLogInClick);
